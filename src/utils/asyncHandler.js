@@ -1,7 +1,7 @@
 //  making this file so that the middlewares are directly be passed into this function and can directly be returned
 
 const asyncHandler = (fn) => {
-  async (req, res, next) => {
+  return async (req, res, next) => {
     try {
       await fn(req, res, next);
     } catch (error) {

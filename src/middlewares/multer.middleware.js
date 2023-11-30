@@ -16,5 +16,4 @@ const storage = multer.diskStorage({
 // creating an instance of the Multer class
 export const upload = multer({ storage: storage });
 
-
 // is 'upload' ko hm fir controller k andr me use kr skte hai...routes likhne k time pe 'upload' se file upload hoga aur fir res.send k andar me response a jayega

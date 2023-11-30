@@ -21,4 +21,10 @@ app.use(express.static("public"));
 // for cookies
 app.use(cookieParser());
 
-export default app;
+// routes import
+import userRouter from "./routes/user.routes.js";
+//  kyunki routes kahi aur hai aur controller ka handler function kahi aur hai to isiliye hmko middleware(.use()) use krna hoga instead of (.get()) ya fir (.post())
+//  route declaration
+app.use("/api/v1/users", userRouter);
+
+export { app };
